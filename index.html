@@ -13,21 +13,46 @@
 <body>
     <div class="container__page">
         <!-- HEADER -->
-    <header class="box__header">
-        <h1 class="box__header--logo">ohmyfood</h1>
+    <header class="box-header">
+        <h1 class="box-header__logo">ohmyfood</h1>
     </header>
         <!-- FORMULAIRE DE RECHERCHE -->
-    <form class="box__search" >
-        <label class="box__search--icon-map" for="mySearch"><i class="fas fa-map-marker-alt"></i></label>
-        <input class="box__search--input" type="search" id="mySearch" name="q"
+    <form class="box-search" >
+        <label class="box-search__icon-map" for="mySearch"><i class="fas fa-map-marker-alt"></i></label>
+        <input class="box-search__input" type="search" id="mySearch" name="q"
        placeholder="Paris,Belleville">
     </form>
         <!-- SECTION EXPLORE -->
-    <section class="box__explore">
-        <h2 class="box__explore--titre">Réservez le menu qui vous convient</h2>
-        <h3 class="box__explore--description">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
-        <a class="btn btn__medium" href="#">
+    <section class="box-explore">
+        <h2 class="titres-acceuil box-explore--titre">Réservez le menu qui vous convient</h2>
+        <h3 class="box-explore--description">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+        <a class="btn btn-medium" href="#">
             <p>Explorer nos restaurants</p>
+        </a>
+    </section>
+        <!-- SECTION PROCESS -->
+    <section class="box-process" >
+        <h2 class="titres-acceuil box-process__titre" >Fonctionnement</h2>
+        <a class="btn box-process__btn" href="#">
+            <div class="box-process__btn--elem-circle">1</div>
+            <div class="box-process__btn--items">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Choisissez un restaurant</p>
+            </div>
+        </a>
+        <a class="btn box-process__btn" href="#">
+            <div class="box-process__btn--elem-circle">2</div>
+            <div class="box-process__btn--items">
+                <i class="fas fa-bars"></i>
+                <p>Composez votre menu</p>
+            </div>
+        </a>
+        <a class="btn box-process__btn" href="#">
+            <div class="box-process__btn--elem-circle">3</div>
+            <div class="box-process__btn--items">
+                <i class="fas fa-store"></i>
+                <p>Dégustez au restaurant</p>
+            </div>
         </a>
     </section>
     </div>
