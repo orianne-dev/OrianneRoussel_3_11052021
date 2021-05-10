@@ -1,0 +1,140 @@
+/*
+*Polices
+*Logo et titres: Shrikhand
+*Texte: Roboto
+*
+*font-family: 'Roboto', sans-serif;
+*font-family: 'Shrikhand', cursive;
+*/
+/*
+**** RESET ****
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/*--------------------*\
+		VARIABLE
+\*--------------------*/
+/*--------------------*\
+	   MIXIN
+\*--------------------*/
+/*--------------------*\
+		BASE
+\*--------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+/*--------------------*\
+		MOBILE S
+\*--------------------*/
+.container__page {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.box__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.box__header--logo {
+  font-size: 2rem;
+}
+
+.box__search {
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+
+.box__search--input {
+  border: none;
+  background-color: #eee;
+  appearance: none;
+  margin-left: 10px;
+  font-size: 1rem;
+  width: 150px;
+}
+
+.box__search--icon-map {
+  padding-bottom: 6px;
+}
+
+.box__explore {
+  background-color: #eaeaea;
+  height: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box__explore--titre {
+  height: 40px;
+  width: 200px;
+  font-size: 1.5rem;
+  transform: translate(10px, -58px);
+}
+
+.box__explore--description {
+  height: 40px;
+  width: 250px;
+  font-size: 0.9rem;
+  transform: translate(10px, -25px);
+  text-align: center;
+  color: #676464;
+}
+
+.btn__medium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 20px;
+  width: 206px;
+  height: 45px;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 4px 7px 11px #989090;
+}
+
+.btn__medium:hover {
+  filter: brightness(111%);
+  box-shadow: 4px 7px 11px #575454;
+}
+
+.btn__medium p {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
