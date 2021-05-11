@@ -45,6 +45,7 @@ $ter-color: #99E2D0;
 $bg-color: #f0eeee;
 $bg-sec-color: #dad5d5;
 $sec-font-color: #676464;
+$font-gris:#3a3636;
 
 $box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
 $box-shadow-hover: 0 0.5rem 1rem rgba(black, 0.35);
@@ -75,7 +76,7 @@ h1 {
 .titres-acceuil {
 	height: 40px;
 width: 200px;
-font-size: 1.5rem;
+font-size: 1.3rem;
 font-weight: bold;
 }
 
@@ -93,8 +94,8 @@ font-weight: bold;
 \*--------------------*/
 
 	.container__page {
-		width: 100%;
-		margin-top: 10px;
+		max-width: 425px;
+    margin: 0 auto;
 	}
 
 	// header //
@@ -105,45 +106,52 @@ font-weight: bold;
 	}
 
 	.box-header__logo {
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 
 	// formulaire de recherche //
 
 	.box-search {
-		background-color: $bg-sec-color;
+		background-color: #dad5d59c;
 		@include flex-center;
-    	height: 50px;
+    	height: 40px;
+		padding-left: 50px;
 	}
 
 	.box-search__input {
 		border: none;
-		background-color: $bg-sec-color;
+		background-color: #e8e5e5;
 		appearance: none;
-		margin-left: 10px;
-		font-size: 1rem;
-		width: 150px;
+		font-size: 0.9rem;
+		
 	}
 
 	.box-search__input::placeholder {
-		color: black;
+		color: $font-gris;
+		font-weight: bolder;
+		
 	}
 
 	.box-search__icon-map {
 		padding-bottom: 6px;
+		padding-right: 10px;
+    font-size: 0.9rem;
+	color: $font-gris;
 	}
 
 	// section explore // 
 
 	.box-explore {
+		padding-top: 35px;
 		background-color: $bg-color;
-		height: 244px;
+		height: 212px;
 		@include flex-center;
     flex-direction: column;
 	}
 
 	.box-explore--titre {
-	transform: translate(10px, -58px);
+		transform: translate(2px, -55px);
+		text-align: center;
 	}
 
 	.box-explore--description {
@@ -178,10 +186,12 @@ font-weight: bold;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+	padding-top: 30px;
 	}
 
 	.box-process__titre {
-
+		align-self: flex-start;
+    padding-left: 20px;
 	}
 
 	.box-process__btn {
@@ -193,34 +203,92 @@ font-weight: bold;
 		@include flex-center;
 	}
 
+	.box-process__btn:hover {
+		background-color: #9256dc55;
+		& i {
+			color: $prem-color;
+		}
+	}
+
+	// Pour centrer le <p> width + flex-end
+
 	.box-process__btn--items {
 		display: flex;
-    align-items: space-between;
-    width: 205px;
-    justify-content: space-between;
+    align-items: center;
+    width: 191px;
+    justify-content: flex-end;
     margin-left: -23px;
 	}
 
-	.fa-mobile-alt {
+	.icon-process {
 		color: $sec-font-color;
+		position: absolute;
+		left: 50px;
 	}
 
 	.box-process__btn--items p {
 		color: black;
-		font-weight: 500;
+    font-weight: 500;
+    font-size: 0.9rem;
 	}
 
 	.box-process__btn--elem-circle {
-		width: 1.5rem;
-    height: 1.5rem;
+		width: 1.4rem;
+    height: 1.4rem;
     border-radius: 50%;
     background-color:$prem-color;
     color: white;
 	@include flex-center;
 	position: absolute;
     transform: translate(-138px, -1px);
+		& span {
+			font-size: 0.8rem;
+		}
 	}
 
+	// SECTION RESTAU //
+
+	.box-restau {
+
+	}
+
+	.box-restau__titre {
+
+	}
+
+	.box-restau__palette {
+		height: 250px;
+		width: 300px;
+	}
+
+	.box-restau__pics {
+		height: 200px;
+		width: 300px;
+	}
+
+	.box-restau__item--nouveau {
+
+	}
+
+	.box-restau__description {
+
+	}
+
+	.boxe-restau__description--titre {
+
+	}
+
+	.boxe-restau__description--ville {
+
+	}
+
+	.box-restau__animation {
+
+	}
+
+	.icon-coeur {
+
+	}
 
 	
 	// @media only screen and (min-width: px) 

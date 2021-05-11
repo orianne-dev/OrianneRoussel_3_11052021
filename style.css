@@ -54,7 +54,7 @@ h1 {
 .titres-acceuil {
   height: 40px;
   width: 200px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
@@ -71,8 +71,8 @@ h1 {
 		MOBILE S
 \*--------------------*/
 .container__page {
-  width: 100%;
-  margin-top: 10px;
+  max-width: 425px;
+  margin: 0 auto;
 }
 
 .box-header {
@@ -83,37 +83,41 @@ h1 {
 }
 
 .box-header__logo {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .box-search {
-  background-color: #dad5d5;
+  background-color: #dad5d59c;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
+  height: 40px;
+  padding-left: 50px;
 }
 
 .box-search__input {
   border: none;
-  background-color: #dad5d5;
+  background-color: #e8e5e5;
   appearance: none;
-  margin-left: 10px;
-  font-size: 1rem;
-  width: 150px;
+  font-size: 0.9rem;
 }
 
 .box-search__input::placeholder {
-  color: black;
+  color: #3a3636;
+  font-weight: bolder;
 }
 
 .box-search__icon-map {
   padding-bottom: 6px;
+  padding-right: 10px;
+  font-size: 0.9rem;
+  color: #3a3636;
 }
 
 .box-explore {
+  padding-top: 35px;
   background-color: #f0eeee;
-  height: 244px;
+  height: 212px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +125,8 @@ h1 {
 }
 
 .box-explore--titre {
-  transform: translate(10px, -58px);
+  transform: translate(2px, -55px);
+  text-align: center;
 }
 
 .box-explore--description {
@@ -154,6 +159,12 @@ h1 {
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+  padding-top: 30px;
+}
+
+.box-process__titre {
+  align-self: flex-start;
+  padding-left: 20px;
 }
 
 .box-process__btn {
@@ -167,26 +178,36 @@ h1 {
   justify-content: center;
 }
 
+.box-process__btn:hover {
+  background-color: #9256dc55;
+}
+.box-process__btn:hover i {
+  color: #9356DC;
+}
+
 .box-process__btn--items {
   display: flex;
-  align-items: space-between;
-  width: 205px;
-  justify-content: space-between;
+  align-items: center;
+  width: 191px;
+  justify-content: flex-end;
   margin-left: -23px;
 }
 
-.fa-mobile-alt {
+.icon-process {
   color: #676464;
+  position: absolute;
+  left: 50px;
 }
 
 .box-process__btn--items p {
   color: black;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .box-process__btn--elem-circle {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.4rem;
+  height: 1.4rem;
   border-radius: 50%;
   background-color: #9356DC;
   color: white;
@@ -195,6 +216,19 @@ h1 {
   justify-content: center;
   position: absolute;
   transform: translate(-138px, -1px);
+}
+.box-process__btn--elem-circle span {
+  font-size: 0.8rem;
+}
+
+.box-restau__palette {
+  height: 250px;
+  width: 300px;
+}
+
+.box-restau__pics {
+  height: 200px;
+  width: 300px;
 }
 
 /*# sourceMappingURL=style.css.map */
