@@ -1,37 +1,28 @@
-/*
-*Polices
-*Logo et titres: Shrikhand
-*Texte: Roboto
-*
-*font-family: 'Roboto', sans-serif;
-*font-family: 'Shrikhand', cursive;
-*/
-/*
-**** RESET ****
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+a,
+em,
+img,
+i,
+ul,
+li,
+form,
+label,
+footer,
+header,
+nav,
+section {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
-
-ol, ul {
-  list-style: none;
 }
 
 /*--------------------*\
@@ -84,6 +75,9 @@ h1 {
 
 .box-header__logo {
   font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  font-family: "Shrikhand", cursive;
 }
 
 .box-search {
@@ -103,7 +97,7 @@ h1 {
 }
 
 .box-search__input::placeholder {
-  color: #3a3636;
+  color: #353535;
   font-weight: bolder;
 }
 
@@ -111,12 +105,12 @@ h1 {
   padding-bottom: 6px;
   padding-right: 10px;
   font-size: 0.9rem;
-  color: #3a3636;
+  color: #353535;
 }
 
 .box-explore {
   padding-top: 35px;
-  background-color: #f0eeee;
+  background-color: #f6f6f6;
   height: 212px;
   display: flex;
   align-items: center;
@@ -135,7 +129,7 @@ h1 {
   font-size: 0.9rem;
   transform: translate(10px, -25px);
   text-align: center;
-  color: #676464;
+  color: #7e7e7e;
 }
 
 .btn-medium {
@@ -146,7 +140,7 @@ h1 {
   border-radius: 20px;
   width: 206px;
   height: 45px;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#ff79da, #9356dc);
 }
 
 .btn-medium p {
@@ -160,6 +154,7 @@ h1 {
   justify-content: space-around;
   flex-direction: column;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .box-process__titre {
@@ -172,17 +167,18 @@ h1 {
   border-radius: 20px;
   width: 280px;
   height: 60px;
-  background-color: #f0eeee;
+  background-color: #f6f6f6;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .box-process__btn:hover {
   background-color: #9256dc55;
 }
 .box-process__btn:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 .box-process__btn--items {
@@ -194,9 +190,9 @@ h1 {
 }
 
 .icon-process {
-  color: #676464;
+  color: #7e7e7e;
   position: absolute;
-  left: 50px;
+  left: 34px;
 }
 
 .box-process__btn--items p {
@@ -209,7 +205,7 @@ h1 {
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 50%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   color: white;
   display: flex;
   align-items: center;
@@ -221,14 +217,127 @@ h1 {
   font-size: 0.8rem;
 }
 
-.box-restau__palette {
+.box-restau {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 1165px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #f6f6f6;
+}
+
+.box-restau__titre {
+  align-self: flex-start;
+  padding-left: 20px;
+}
+
+.box-restau__items {
   height: 250px;
   width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.box-restau__items:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  filter: brightness(111%);
 }
 
 .box-restau__pics {
-  height: 200px;
+  height: 176px;
   width: 300px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
+
+.box-restau__item--nouveau {
+  color: #008766;
+  background-color: #99e2d0;
+  font-size: 1rem;
+  width: 89px;
+  height: 28px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
+
+.box-restau__description {
+  display: flex;
+  align-items: center;
+  padding: 13px;
+}
+
+.boxe-restau__description--titre-ville {
+  width: 50%;
+  line-height: 22px;
+  font-size: 1rem;
+  color: black;
+}
+
+.boxe-restau__description--titre {
+  font-weight: bolder;
+}
+
+.box-restau__animation {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.icon-coeur {
+  font-size: 1.3rem;
+}
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #353535;
+}
+
+.box-footer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 21px;
+  line-height: 28px;
+}
+
+.box-footer__logo {
+  font-size: 1.1rem;
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: white;
+  font-family: "Shrikhand", cursive;
+}
+
+.fa-utensils {
+  padding-right: 15px;
+  font-size: 0.9rem;
+}
+
+.fa-hands-helping {
+  padding-right: 6px;
+  font-size: 0.9rem;
+}
+
+.box-footer__contact {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+}
+.box-footer__contact:hover {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */

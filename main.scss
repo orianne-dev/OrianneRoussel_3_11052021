@@ -1,52 +1,55 @@
-/*
-*Polices
-*Logo et titres: Shrikhand
-*Texte: Roboto
-*
-*font-family: 'Roboto', sans-serif;
-*font-family: 'Shrikhand', cursive;
-*/
-
-/*
-**** RESET ****
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-
-ol, ul {
-	list-style: none;
+// RESET
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+a,
+em,
+img,
+i,
+ul,
+li,
+form,
+label,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /*--------------------*\
 		VARIABLE
 \*--------------------*/
 
-$prem-color:#9356DC;
-$sec-color:#FF79DA;
-$ter-color: #99E2D0;
-$bg-color: #f0eeee;
-$bg-sec-color: #dad5d5;
-$sec-font-color: #676464;
-$font-gris:#3a3636;
+// font
+$font-logo-titre: "Shrikhand", cursive;
+$font-texte: "Roboto", sans-serif;
 
+// couleurs charte
+$prem-color: #9356dc;
+$sec-color: #ff79da;
+$ter-color: #99e2d0;
+
+// couleurs gris
+$bg-color: #f6f6f6;
+$bg-sec-color: #eaeaea;
+$sec-font-color: #7e7e7e;
+$footer-color: #353535;
+
+// couleurs box new
+$color-box-new: #99e2d0;
+$color-font-new: #008766;
+
+// variable autres
 $box-shadow: 0 0.5rem 1rem rgba(black, 0.15);
 $box-shadow-hover: 0 0.5rem 1rem rgba(black, 0.35);
 $filter-light: brightness(111%);
@@ -56,239 +59,320 @@ $filter-light: brightness(111%);
 \*--------------------*/
 
 @mixin flex-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+@mixin flex-box-column {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
 
 /*--------------------*\
 		BASE
 \*--------------------*/
 
 body {
-	font-family: 'Roboto', sans-serif;
+  font-family: $font-texte;
 }
 h1 {
-	font-family: 'Shrikhand', cursive;
+  font-family: $font-logo-titre;
 }
 
 .titres-acceuil {
-	height: 40px;
-width: 200px;
-font-size: 1.3rem;
-font-weight: bold;
+  height: 40px;
+  width: 200px;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .btn {
-	box-shadow: $box-shadow;
+  box-shadow: $box-shadow;
 }
 
 .btn:hover {
-	filter: $filter-light;
-	box-shadow: $box-shadow-hover;
+  filter: $filter-light;
+  box-shadow: $box-shadow-hover;
 }
 
 /*--------------------*\
 		MOBILE S
 \*--------------------*/
 
-	.container__page {
-		max-width: 425px;
-    margin: 0 auto;
-	}
+.container__page {
+  max-width: 425px;
+  margin: 0 auto;
+}
 
-	// header //
+//---------- HEADER ----------//
 
-	.box-header {
-	@include flex-center;
-    height: 50px;
-	}
+.box-header {
+  @include flex-center;
+  height: 50px;
+}
 
-	.box-header__logo {
-		font-size: 1.7rem;
-	}
+.box-header__logo {
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: black;
+  font-family: $font-logo-titre;
+}
 
-	// formulaire de recherche //
+//--------- FORMULAIRE DE RECHERCHE ----------//
 
-	.box-search {
-		background-color: #dad5d59c;
-		@include flex-center;
-    	height: 40px;
-		padding-left: 50px;
-	}
+.box-search {
+  background-color: #dad5d59c;
+  @include flex-center;
+  height: 40px;
+  padding-left: 50px;
+}
 
-	.box-search__input {
-		border: none;
-		background-color: #e8e5e5;
-		appearance: none;
-		font-size: 0.9rem;
-		
-	}
+.box-search__input {
+  border: none;
+  background-color: #e8e5e5;
+  appearance: none;
+  font-size: 0.9rem;
+}
 
-	.box-search__input::placeholder {
-		color: $font-gris;
-		font-weight: bolder;
-		
-	}
+.box-search__input::placeholder {
+  color: $footer-color;
+  font-weight: bolder;
+}
 
-	.box-search__icon-map {
-		padding-bottom: 6px;
-		padding-right: 10px;
-    font-size: 0.9rem;
-	color: $font-gris;
-	}
+.box-search__icon-map {
+  padding-bottom: 6px;
+  padding-right: 10px;
+  font-size: 0.9rem;
+  color: $footer-color;
+}
 
-	// section explore // 
+//---------- SECTION EXPLORE ----------//
 
-	.box-explore {
-		padding-top: 35px;
-		background-color: $bg-color;
-		height: 212px;
-		@include flex-center;
-    flex-direction: column;
-	}
+.box-explore {
+  padding-top: 35px;
+  background-color: $bg-color;
+  height: 212px;
+  @include flex-center;
+  flex-direction: column;
+}
 
-	.box-explore--titre {
-		transform: translate(2px, -55px);
-		text-align: center;
-	}
+.box-explore--titre {
+  transform: translate(2px, -55px);
+  text-align: center;
+}
 
-	.box-explore--description {
-		height: 40px;
-    width: 250px;
-    font-size: 0.9rem;
-    transform: translate(10px, -25px);
-    text-align: center;
-    color: $sec-font-color;
+.box-explore--description {
+  height: 40px;
+  width: 250px;
+  font-size: 0.9rem;
+  transform: translate(10px, -25px);
+  text-align: center;
+  color: $sec-font-color;
+}
 
-	}
+.btn-medium {
+  @include flex-center;
+  text-decoration: none;
+  border-radius: 20px;
+  width: 206px;
+  height: 45px;
+  background-image: linear-gradient($sec-color, $prem-color);
+}
 
-	.btn-medium {
-		@include flex-center;
-		text-decoration: none;
-		border-radius: 20px;
-        width: 206px;
-    height: 45px;
-	background-image: linear-gradient($sec-color,$prem-color);
-	}
+.btn-medium p {
+  color: white;
+}
 
-	.btn-medium p {
-		
-    color: white;
-	}
+//---------- SECTION PROCESS ----------//
 
-	// section process //
+.box-process {
+  height: 300px;
+  @include flex-box-column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
-	.box-process {
-		height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-	padding-top: 30px;
-	}
+.box-process__titre {
+  align-self: flex-start;
+  padding-left: 20px;
+}
 
-	.box-process__titre {
-		align-self: flex-start;
-    padding-left: 20px;
-	}
+.box-process__btn {
+  text-decoration: none;
+  border-radius: 20px;
+  width: 280px;
+  height: 60px;
+  background-color: $bg-color;
+  @include flex-center;
+  position: relative;
+}
 
-	.box-process__btn {
-		text-decoration: none;
-		border-radius: 20px;
-        width: 280px;
-    	height: 60px;
-		background-color: $bg-color;
-		@include flex-center;
-	}
+.box-process__btn:hover {
+  background-color: #9256dc55;
+  & i {
+    color: $prem-color;
+  }
+}
 
-	.box-process__btn:hover {
-		background-color: #9256dc55;
-		& i {
-			color: $prem-color;
-		}
-	}
+// Pour centrer le <p> width + flex-end
 
-	// Pour centrer le <p> width + flex-end
+.box-process__btn--items {
+  display: flex;
+  align-items: center;
+  width: 191px;
+  justify-content: flex-end;
+  margin-left: -23px;
+}
 
-	.box-process__btn--items {
-		display: flex;
-    align-items: center;
-    width: 191px;
-    justify-content: flex-end;
-    margin-left: -23px;
-	}
+.icon-process {
+  color: $sec-font-color;
+  position: absolute;
+  left: 34px;
+}
 
-	.icon-process {
-		color: $sec-font-color;
-		position: absolute;
-		left: 50px;
-	}
+.box-process__btn--items p {
+  color: black;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
 
-	.box-process__btn--items p {
-		color: black;
-    font-weight: 500;
-    font-size: 0.9rem;
-	}
+.box-process__btn--elem-circle {
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background-color: $prem-color;
+  color: white;
+  @include flex-center;
+  position: absolute;
+  transform: translate(-138px, -1px);
+  & span {
+    font-size: 0.8rem;
+  }
+}
 
-	.box-process__btn--elem-circle {
-		width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    background-color:$prem-color;
-    color: white;
-	@include flex-center;
-	position: absolute;
-    transform: translate(-138px, -1px);
-		& span {
-			font-size: 0.8rem;
-		}
-	}
+//---------- SECTION RESTAU ----------//
 
-	// SECTION RESTAU //
+.box-restau {
+  @include flex-box-column;
+  height: 1165px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $bg-color;
+}
 
-	.box-restau {
+.box-restau__titre {
+  align-self: flex-start;
+  padding-left: 20px;
+}
 
-	}
+.box-restau__items {
+  height: 250px;
+  width: 300px;
+  background-color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  box-shadow: $box-shadow;
+}
 
-	.box-restau__titre {
+.box-restau__items:hover {
+  box-shadow: $box-shadow-hover;
+  filter: $filter-light;
+}
 
-	}
+.box-restau__pics {
+  height: 176px;
+  width: 300px;
+  border-radius: 15px 15px 0 0;
+  object-fit: cover;
+}
 
-	.box-restau__palette {
-		height: 250px;
-		width: 300px;
-	}
+.box-restau__item--nouveau {
+  color: $color-font-new;
+  background-color: $color-box-new;
+  font-size: 1rem;
+  width: 89px;
+  height: 28px;
+  border-radius: 5px;
+  @include flex-center;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+}
 
-	.box-restau__pics {
-		height: 200px;
-		width: 300px;
-	}
+.box-restau__description {
+  display: flex;
+  align-items: center;
+  padding: 13px;
+}
 
-	.box-restau__item--nouveau {
+.boxe-restau__description--titre-ville {
+  width: 50%;
+  line-height: 22px;
+  font-size: 1rem;
+  color: black;
+}
 
-	}
+.boxe-restau__description--titre {
+  font-weight: bolder;
+}
 
-	.box-restau__description {
+.box-restau__animation {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3rem;
+  color: black;
+}
 
-	}
+.icon-coeur {
+  font-size: 1.3rem;
+}
 
-	.boxe-restau__description--titre {
+// ------------ FOOTER ---------- //
 
-	}
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: $footer-color;
+}
 
-	.boxe-restau__description--ville {
+.box-footer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 21px;
+  line-height: 28px;
+}
 
-	}
+.box-footer__logo {
+  font-size: 1.1rem;
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: white;
+  font-family: $font-logo-titre;
+}
 
-	.box-restau__animation {
+.fa-utensils {
+  padding-right: 15px;
+  font-size: 0.9rem;
+}
 
-	}
+.fa-hands-helping {
+  padding-right: 6px;
+  font-size: 0.9rem;
+}
 
-	.icon-coeur {
+.box-footer__contact {
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  &:hover {
+    color: $prem-color;
+  }
+}
 
-	}
-
-	
-	// @media only screen and (min-width: px) 
+// @media only screen and (min-width: px)
