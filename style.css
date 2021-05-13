@@ -406,5 +406,85 @@ h1 {
     font-size: 0.9rem;
   }
 }
+/*--------------------*\
+		TABLETTE
+\*--------------------*/
+@media only screen and (min-width: 768px) {
+  .container__page {
+    max-width: 100%;
+  }
+
+  .box-search {
+    height: 45px;
+  }
+
+  .btn-medium {
+    width: 230px;
+  }
+
+  .box-process__btn {
+    width: 334px;
+  }
+
+  .box-process__titre {
+    align-self: center;
+    padding-left: 0;
+  }
+
+  .box-restau__titre {
+    text-align-last: center;
+    width: -webkit-fill-available;
+    align-content: center;
+    padding-left: 0px;
+  }
+
+  .box-restau {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 615px;
+  }
+
+  .box-restau__items {
+    width: 46%;
+  }
+
+  .box-footer {
+    align-items: center;
+  }
+}
+/*--------------------*\
+		TABLETTE L
+\*--------------------*/
+@media only screen and (min-width: 1024px) {
+  .box-process {
+    height: 120px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .box-process__titre {
+    width: -webkit-fill-available;
+    text-align: center;
+  }
+
+  .box-process__btn {
+    width: 273px;
+  }
+
+  .icon-process {
+    font-size: 1rem;
+    left: 24px;
+  }
+}
+/*--------------------*\
+		DESKTOP
+\*--------------------*/
+@media only screen and (min-width: 1025px) {
+  .container__page {
+    max-width: 1025px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
