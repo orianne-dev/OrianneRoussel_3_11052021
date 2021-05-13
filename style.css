@@ -138,8 +138,8 @@ h1 {
   justify-content: center;
   text-decoration: none;
   border-radius: 20px;
-  width: 206px;
-  height: 45px;
+  width: 70%;
+  height: 25%;
   background-image: linear-gradient(#ff79da, #9356dc);
 }
 
@@ -165,7 +165,7 @@ h1 {
 .box-process__btn {
   text-decoration: none;
   border-radius: 20px;
-  width: 280px;
+  width: 85%;
   height: 60px;
   background-color: #f6f6f6;
   display: flex;
@@ -211,7 +211,7 @@ h1 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  transform: translate(-138px, -1px);
+  left: -9px;
 }
 .box-process__btn--elem-circle span {
   font-size: 0.8rem;
@@ -235,7 +235,7 @@ h1 {
 
 .box-restau__items {
   height: 250px;
-  width: 300px;
+  width: 90%;
   background-color: white;
   border-radius: 20px;
   text-decoration: none;
@@ -250,7 +250,7 @@ h1 {
 
 .box-restau__pics {
   height: 176px;
-  width: 300px;
+  width: 100%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
@@ -277,8 +277,8 @@ h1 {
 }
 
 .boxe-restau__description--titre-ville {
-  width: 50%;
-  line-height: 22px;
+  width: 60%;
+  line-height: 10px;
   font-size: 1rem;
   color: black;
 }
@@ -338,6 +338,73 @@ h1 {
 }
 .box-footer__contact:hover {
   color: #9356dc;
+}
+
+/*--------------------*\
+		MOBILE M
+\*--------------------*/
+@media only screen and (min-width: 375px) {
+  .btn-medium p {
+    font-size: 1.1rem;
+  }
+
+  .box-process__btn--items p {
+    font-size: 1rem;
+  }
+}
+/*--------------------*\
+		MOBILE L
+\*--------------------*/
+@media only screen and (min-width: 425px) {
+  .box-header {
+    height: 55px;
+  }
+
+  .box-header__logo {
+    font-size: 2rem;
+  }
+
+  .box-search__input {
+    font-size: 1rem;
+  }
+
+  .box-search__icon-map {
+    padding-bottom: 4px;
+    font-size: 1rem;
+  }
+
+  .box-search {
+    height: 53px;
+    padding-left: 77px;
+  }
+
+  .titres-acceuil {
+    font-size: 1.5rem;
+  }
+
+  .box-explore--description {
+    width: 280px;
+    font-size: 1rem;
+  }
+
+  .btn-medium {
+    width: 58%;
+  }
+
+  .icon-process {
+    font-size: 1.2rem;
+    left: 41px;
+  }
+
+  .box-process__btn--elem-circle {
+    width: 1.6rem;
+    height: 1.6rem;
+    left: -11px;
+  }
+
+  .box-process__btn--elem-circle span {
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
