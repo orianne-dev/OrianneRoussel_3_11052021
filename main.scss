@@ -376,6 +376,128 @@ h1 {
 }
 
 /*--------------------*\
+		PAGE MENU
+\*--------------------*/
+
+// HEADER
+
+.box-header {
+  position: relative;
+}
+
+.box-header__icon {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+    left: 10px;
+    top: 19px;
+}
+
+// BANNIERE
+.container-banniere {
+  height: 300px;
+  max-width: 425px;
+  position: absolute;
+  z-index: -1;
+}
+
+.ban__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+// SECTION MENU
+.box-menu {
+  display: flex;
+    flex-direction: column;
+    margin-top: 198px;
+    background-color: #f6f6f6;
+    border-radius: 35px 30px 0 0;
+    padding-left: 18px;
+}
+
+.box-menu__header {
+  display: flex;
+    padding-top: 30px;
+    width: auto;
+    padding-bottom: 25px;
+}
+
+.box-menu__nom-restaurant {
+  font-size: 1.5rem;
+    flex: 4;
+}
+
+.box-menu__animation {
+  flex: 1;
+}
+
+.box-menu__icon-coeur {
+  transform: translate(10px, 10px);
+}
+
+.box-menu__titre {
+  border-bottom: 2px solid $ter-color ;
+    width: 45px;
+    height: 24px;
+}
+
+.box-menu__items {
+  margin-top: 15px;
+  width: auto;
+  height: auto;
+}
+
+.box-menu__cards {
+  width: 90%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  line-height: 7px;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  box-shadow: $box-shadow;
+}
+
+.box-menu__cards:hover {
+  box-shadow: $box-shadow-hover;
+}
+
+.cards__description {
+  flex: 2;
+  transform: translate(10px, 13px);
+}
+
+.cards__box-prix {
+  flex: 1;
+  transform: translate(56px, 19px);
+}
+
+.cards__description--titre {
+  font-weight: bolder;
+}
+
+.cards__prix {
+  font-weight: bolder;
+}
+
+.cards__box-animation {
+  width: 45px;
+    height: 51px;
+    border-radius: 0 15px 15px 0;
+    background-color: $ter-color;
+}
+
+.fa-check-circle {
+  color: $bg-sec-color;
+  transform: translate(14px, 19px);
+}
+
+
+
+
+/*--------------------*\
 		MOBILE M
 \*--------------------*/
 
@@ -453,8 +575,16 @@ h1 {
 
 @media only screen and (min-width: 768px) {
 
+  .box-menu__header {
+      width: 425px;
+  }
+
   .container__page {
     max-width: 100%;
+}
+
+.container-banniere {
+  max-width: 1025px;
 }
 
 .box-search {
