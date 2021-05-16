@@ -71,6 +71,12 @@ $filter-light: brightness(111%);
   flex-direction: column;
 }
 
+@mixin break-text {
+  text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
 /*--------------------*\
 		BASE
 \*--------------------*/
@@ -152,11 +158,14 @@ h1 {
 //---------- SECTION EXPLORE ----------//
 
 .box-explore {
-  padding-top: 35px;
   background-color: $bg-color;
-  height: 212px;
   @include flex-center;
   flex-direction: column;
+}
+
+.box-explore__index {
+  padding-top: 35px;
+  height: 212px;
 }
 
 .box-explore--titre {
@@ -177,9 +186,12 @@ h1 {
   @include flex-center;
   text-decoration: none;
   border-radius: 20px;
+  background-image: linear-gradient($sec-color, $prem-color);
+}
+
+.btn-medium__index {
   width: 70%;
   height: 25%;
-  background-image: linear-gradient($sec-color, $prem-color);
 }
 
 .btn-medium p {
@@ -445,19 +457,25 @@ h1 {
 
 .box-menu__items {
   margin-top: 15px;
+  margin-bottom: 15px;
   width: auto;
-  height: auto;
+  height: 250px;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
 }
 
 .box-menu__cards {
   width: 90%;
-  height: 50px;
+  height: 68px;
   background-color: white;
+  padding: 0 10px;
   display: flex;
-  line-height: 7px;
+  line-height: 15px;
   font-size: 0.9rem;
   border-radius: 15px;
-  box-shadow: $box-shadow;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
 }
 
 .box-menu__cards:hover {
@@ -466,20 +484,34 @@ h1 {
 
 .cards__description {
   flex: 2;
-  transform: translate(10px, 13px);
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
 }
 
 .cards__box-prix {
   flex: 1;
-  transform: translate(56px, 19px);
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .cards__description--titre {
   font-weight: bolder;
+  @include break-text;
+  width: 177px;
 }
+
+.cards__description--soustitre {
+  @include break-text;
+  width: 177px;
+}
+
+
 
 .cards__prix {
   font-weight: bolder;
+  display: flex;
 }
 
 .cards__box-animation {
@@ -494,6 +526,22 @@ h1 {
   transform: translate(14px, 19px);
 }
 
+// BOUTON
+
+.box-explore__menu {
+  height: 90px;
+    padding-bottom: 42px;
+}
+
+.btn-medium__menu {
+
+  height: 50px;
+    width: 191px;
+    border-radius: 25px;
+
+}
+
+
 
 
 
@@ -503,12 +551,20 @@ h1 {
 
 @media only screen and (min-width: 375px) {
 
-  .btn-medium p {
+  .btn-medium__menu p {
     font-size: 1.1rem;
 }
 
 .box-process__btn--items p {
   font-size: 1rem;
+}
+
+.cards__description--titre {
+  width: 215px;
+}
+
+.cards__description--soustitre {
+  width: 215px;
 }
 }
 
@@ -544,13 +600,14 @@ h1 {
     font-size: 1.5rem;
 }
 
+.btn-medium__index {
+  width: 224px;
+  height: 55px;
+}
+
 .box-explore--description {
   width: 280px;
   font-size: 1rem;
-}
-
-.btn-medium {
-  width: 58%;
 }
 
 .icon-process {
@@ -591,11 +648,18 @@ h1 {
   height: 45px;
 }
 
-.btn-medium {
+.cards__description--titre {
+  width: 300px;
+}
+
+.cards__description--soustitre {
+  width: 300px;
+}
+.btn-medium__menu {
   width: 230px;
 }
 
-.box-process__btn {
+.box-process__btn__menu {
   width: 334px;
 }
 
