@@ -32,6 +32,126 @@ section {
 	   MIXIN
 \*--------------------*/
 /*--------------------*\
+		ANIMATION
+\*--------------------*/
+.carre-blanc__anime {
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  height: 24px;
+  width: 21px;
+  animation-duration: 2s;
+  animation-name: like;
+}
+
+@keyframes like {
+  from {
+    height: 24px;
+  }
+  to {
+    height: 0px;
+  }
+}
+.icon-coeur__rempli {
+  color: #ff79da;
+  position: absolute;
+  z-index: 1;
+}
+
+.icon-coeur {
+  z-index: 3;
+}
+
+.icon-coeur:hover {
+  color: #ff79da;
+  background-color: transparent;
+}
+.icon-coeur:hover:active > .carre-blanc__anime {
+  animation-duration: 3s;
+  animation-name: like;
+  height: 24px;
+}
+
+@keyframes chargement {
+  0% {
+    z-index: -1;
+  }
+  2% {
+    z-index: 999;
+    background-color: #353535db;
+  }
+  98% {
+    background-color: #3535351a;
+  }
+  100% {
+    z-index: -1;
+  }
+}
+.loader-container {
+  background: #353535db;
+  max-width: 425px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: chargement 5s;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.loader__child {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 8px solid transparent;
+  border-top-color: #9356dc;
+  border-radius: 50%;
+  animation: loader-prem 1.2s linear infinite;
+}
+
+.loader__child-sec {
+  border: 8px solid transparent;
+  border-bottom-color: #9356dc;
+  animation: loader-sec 1.2sec linear infinite;
+}
+
+@keyframes loader-prem {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
+}
+@keyframes loader-sec {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
+/*--------------------*\
 		BASE
 \*--------------------*/
 body {
@@ -64,6 +184,7 @@ h1 {
 .container__page {
   max-width: 425px;
   margin: 0 auto;
+  background-color: #f6f6f6;
 }
 
 .box-header {
@@ -578,6 +699,10 @@ h1 {
 
   .container__page {
     max-width: 100%;
+  }
+
+  .loader-container {
+    max-width: 1025px;
   }
 
   .container-banniere {
