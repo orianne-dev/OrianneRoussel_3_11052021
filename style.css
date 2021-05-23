@@ -34,79 +34,65 @@ section {
 /*--------------------*\
 		ANIMATION
 \*--------------------*/
-.carre-blanc__anime {
-  background-color: white;
-  position: absolute;
-  z-index: 2;
-  height: 24px;
-  width: 21px;
-  animation-duration: 2s;
-  animation-name: like;
-}
-
-@keyframes like {
-  from {
-    height: 24px;
-  }
-  to {
-    height: 0px;
-  }
-}
-.icon-coeur__rempli {
-  color: #ff79da;
-  position: absolute;
-  z-index: 1;
-}
-
 .icon-coeur {
-  z-index: 3;
+  opacity: 1;
+  color: black;
+  position: absolute;
+  z-index: 98;
 }
 
-.icon-coeur:hover {
-  color: #ff79da;
-  background-color: transparent;
+.icon-coeur__rempli {
+  position: absolute;
+  opacity: 0;
+  color: #9356dc;
+  font-size: 1.4rem;
+  z-index: 99;
 }
-.icon-coeur:hover:active > .carre-blanc__anime {
-  animation-duration: 3s;
-  animation-name: like;
-  height: 24px;
+.icon-coeur__rempli:hover {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-in-out;
 }
 
 @keyframes chargement {
   0% {
-    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999;
+    background-color: #353535;
   }
-  2% {
-    z-index: 999;
-    background-color: #353535db;
-  }
-  98% {
-    background-color: #3535351a;
+  99% {
+    z-index: 99999;
   }
   100% {
-    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .loader-container {
-  background: #353535db;
+  background: #353535;
   max-width: 425px;
   position: absolute;
-  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: chargement 5s;
+  animation: chargement 7s;
 }
 
 .loader {
+  opacity: 1;
   width: 100px;
   height: 100px;
   position: relative;
 }
 
 .loader__child {
+  opacity: 1;
   box-sizing: border-box;
   position: absolute;
   width: 100%;
@@ -118,6 +104,7 @@ section {
 }
 
 .loader__child-sec {
+  opacity: 1;
   border: 8px solid transparent;
   border-bottom-color: #9356dc;
   animation: loader-sec 1.2sec linear infinite;
@@ -312,8 +299,8 @@ h1 {
   display: flex;
   align-items: center;
   width: 191px;
-  justify-content: flex-end;
-  margin-left: -23px;
+  justify-content: flex-start;
+  margin-left: 50px;
 }
 
 .icon-process {
@@ -326,6 +313,8 @@ h1 {
   color: black;
   font-weight: 500;
   font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
 }
 
 .box-process__btn--elem-circle {
@@ -486,7 +475,7 @@ h1 {
   height: 300px;
   max-width: 425px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .ban__img {
@@ -502,6 +491,8 @@ h1 {
   background-color: #f6f6f6;
   border-radius: 35px 30px 0 0;
   padding-left: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .box-menu__header {
