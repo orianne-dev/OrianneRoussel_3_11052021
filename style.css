@@ -653,6 +653,18 @@ h1 {
   opacity: 1;
 }
 
+.box-menu__items--entree-enchante {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: auto;
+  height: 333px;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  opacity: 1;
+}
+
 .box-menu__cards {
   width: 90%;
   height: 68px;

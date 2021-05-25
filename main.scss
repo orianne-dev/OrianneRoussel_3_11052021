@@ -87,39 +87,37 @@ $filter-light: brightness(111%);
   opacity: 1;
   color: black;
   position: absolute;
-z-index: 98;
+  z-index: 98;
+}
+
+.icon-coeur__rempli {
+  position: absolute;
+  transform: translate(1px, -1px);
+  opacity: 0;
+  color: $prem-color;
+  font-size: 1.4rem;
+  z-index: 99;
+  &:hover {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
   }
+}
 
-
-  .icon-coeur__rempli {
-    position: absolute;
-    transform: translate(1px, -1px);
-    opacity: 0;
-    color:$prem-color;
-    font-size: 1.4rem;
-    z-index: 99;
-    &:hover{
-      opacity: 1;
-      transition-property: opacity;
-      transition-duration: 1s;
-      transition-timing-function: ease-out;
-      }
-    }
-  
 .icon-coeur__rempli-menu {
   transform: translate(-11px, 9px);
 }
 
-
 // LOADER //
 @keyframes chargement {
   0% {
-    opacity:1;
+    opacity: 1;
     visibility: visible;
     z-index: 99999;
-    background-color:#353535 ;
+    background-color: #353535;
   }
-  99%{
+  99% {
     z-index: 99999;
   }
   100% {
@@ -130,19 +128,18 @@ z-index: 98;
 
 .loader-container {
   background: #353535;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: chargement 7s;
-    left: 0;
-    right: 0;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: chargement 7s;
+  left: 0;
+  right: 0;
 }
-
 
 .loader {
   opacity: 1;
@@ -172,37 +169,37 @@ z-index: 98;
 
 @keyframes loader-prem {
   0% {
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
     border-width: 10px;
   }
   50% {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
     border-width: 1px;
   }
   100% {
-    transform: rotate(360deg); 
+    transform: rotate(360deg);
     border-width: 10px;
   }
 }
 
 @keyframes loader-sec {
   0% {
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
     border-width: 1px;
   }
   50% {
-    transform: rotate(180deg); 
+    transform: rotate(180deg);
     border-width: 10px;
   }
   100% {
-    transform: rotate(360deg); 
+    transform: rotate(360deg);
     border-width: 1px;
   }
 }
 
 // CHECK-BOX //
 
-@keyframes anime-check-icon  {
+@keyframes anime-check-icon {
   10% {
     transform: rotate(0deg);
   }
@@ -226,42 +223,41 @@ z-index: 98;
   }
 }
 
-.box-menu__cards:hover  {
+.box-menu__cards:hover {
   box-shadow: $box-shadow-hover;
 
+  .cards__box-prix {
+    min-width: 50px;
+  }
 
-.cards__box-prix {
-  min-width: 50px;
-}
+  .cards__box-animation {
+    animation-name: anim-check-box;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    display: flex;
+    flex: 0 0 15%;
+    max-width: 50px;
+    overflow: hidden;
+    height: 68px;
+    border-radius: 0 15px 15px 0;
+    background-color: $ter-color;
+  }
 
-.cards__box-animation {
-  animation-name: anim-check-box;
-  animation-timing-function: ease;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
-  display: flex;
-  flex: 0 0 15%;
-  max-width: 50px;
-  overflow: hidden;
-  height: 68px;
-  border-radius: 0 15px 15px 0;
-  background-color: $ter-color;
-}
-
-.fa-check-circle {
-  visibility: visible;
-  animation-name: anime-check-icon;
-  animation-timing-function: linear;
-  animation-duration: .5s;
-  animation-iteration-count: 1;
-  background-color: $ter-color;
-  display: flex;
-  width: 50px;
-  @include flex-center;
-  font-size: 1.3rem;
-  color: white;
-}
+  .fa-check-circle {
+    visibility: visible;
+    animation-name: anime-check-icon;
+    animation-timing-function: linear;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    background-color: $ter-color;
+    display: flex;
+    width: 50px;
+    @include flex-center;
+    font-size: 1.3rem;
+    color: white;
+  }
 }
 
 .fa-check-circle {
@@ -270,62 +266,59 @@ z-index: 98;
 
 // ANIMATION MENU //
 
-.card1{
+.card1 {
   animation: fadeIn ease-out 1s;
-  animation-delay: 0s; 
+  animation-delay: 0s;
 }
 
 .card2 {
   animation: fadeIn ease-out 1s;
-  animation-delay: .2s; 
+  animation-delay: 0.2s;
 }
 
 .card3 {
   animation: fadeIn ease-out 1s;
-  animation-delay: .4s; 
+  animation-delay: 0.4s;
 }
 
-.card4{
+.card4 {
   animation: fadeIn ease-out 1s;
-  animation-delay: .6s; 
+  animation-delay: 0.6s;
 }
 
 .card5 {
   animation: fadeIn ease-out 1s;
-  animation-delay: .8s; 
+  animation-delay: 0.8s;
 }
 
-.card6{
+.card6 {
   animation: fadeIn ease-out 1s;
-  animation-delay: 1s; 
+  animation-delay: 1s;
 }
-.card7{
+.card7 {
   animation: fadeIn ease-out 1s;
-  animation-delay: 1.2s; 
+  animation-delay: 1.2s;
 }
 
 .card8 {
   animation: fadeIn ease-out 1s;
-  animation-delay: 1.4s; 
+  animation-delay: 1.4s;
 }
 
-.card9{
+.card9 {
   animation: fadeIn ease-out 1s;
-  animation-delay: 1.6s; 
+  animation-delay: 1.6s;
 }
 
 @keyframes fadeIn {
   0% {
-    opacity:0.5;
+    opacity: 0.5;
     transform: translateY(-5px);
   }
   100% {
-    opacity:1;
+    opacity: 1;
   }
 }
-
-
-
 
 /*--------------------*\
 		BASE
@@ -362,7 +355,7 @@ h1 {
 .container__page {
   max-width: 425px;
   margin: 0 auto;
-  background-color: #f6f6f6
+  background-color: #f6f6f6;
 }
 
 //---------- HEADER ----------//
@@ -680,7 +673,7 @@ h1 {
   border-radius: 35px 30px 0 0;
   padding-left: 18px;
   position: relative;
-    z-index: 2;
+  z-index: 2;
 }
 
 .box-menu__header {
@@ -715,6 +708,18 @@ h1 {
   margin-bottom: 15px;
   width: auto;
   height: 250px;
+  align-content: center;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  opacity: 1;
+}
+
+.box-menu__items--entree-enchante {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: auto;
+  height: 333px;
   align-content: center;
   display: flex;
   justify-content: space-around;
