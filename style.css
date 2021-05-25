@@ -65,7 +65,10 @@ section {
     opacity: 1;
     visibility: visible;
     z-index: 99999;
-    background-color: #353535;
+    background-color: #000000;
+  }
+  90% {
+    opacity: 1;
   }
   99% {
     z-index: 99999;
@@ -85,9 +88,10 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: chargement 7s;
+  animation: chargement 3s;
   left: 0;
   right: 0;
+  bottom: 0;
 }
 
 .loader {
