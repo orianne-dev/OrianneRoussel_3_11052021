@@ -90,20 +90,25 @@ $filter-light: brightness(111%);
 z-index: 98;
   }
 
+
   .icon-coeur__rempli {
     position: absolute;
-    // transform: translate(0.7px,-0.4px);
+    transform: translate(1px, -1px);
     opacity: 0;
-  color:$prem-color;
+    color:$prem-color;
     font-size: 1.4rem;
     z-index: 99;
     &:hover{
       opacity: 1;
       transition-property: opacity;
-      transition-duration: 1.5s;
-      transition-timing-function: ease-in-out;
+      transition-duration: 1s;
+      transition-timing-function: ease-out;
       }
     }
+  
+.icon-coeur__rempli-menu {
+  transform: translate(-11px, 9px);
+}
 
 
 // LOADER //
@@ -125,7 +130,6 @@ z-index: 98;
 
 .loader-container {
   background: #353535;
-  max-width: 425px;
     position: absolute;
     visibility: hidden;
     opacity: 0;
@@ -135,6 +139,8 @@ z-index: 98;
     align-items: center;
     justify-content: center;
     animation: chargement 7s;
+    left: 0;
+    right: 0;
 }
 
 
@@ -193,6 +199,131 @@ z-index: 98;
     border-width: 1px;
   }
 }
+
+// CHECK-BOX //
+
+@keyframes anime-check-icon  {
+  10% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anim-check-box {
+  0% {
+    transform: translate(50px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.box-menu__cards:hover  {
+  box-shadow: $box-shadow-hover;
+
+
+.cards__box-prix {
+  min-width: 50px;
+}
+
+.cards__box-animation {
+  animation-name: anim-check-box;
+  animation-timing-function: ease;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  display: flex;
+  flex: 0 0 15%;
+  max-width: 50px;
+  overflow: hidden;
+  height: 68px;
+  border-radius: 0 15px 15px 0;
+  background-color: $ter-color;
+}
+
+.fa-check-circle {
+  visibility: visible;
+  animation-name: anime-check-icon;
+  animation-timing-function: linear;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  background-color: $ter-color;
+  display: flex;
+  width: 50px;
+  @include flex-center;
+  font-size: 1.3rem;
+  color: white;
+}
+}
+
+.fa-check-circle {
+  visibility: hidden;
+}
+
+// ANIMATION MENU //
+
+.card1{
+  animation: fadeIn ease-out 1s;
+  animation-delay: 0s; 
+}
+
+.card2 {
+  animation: fadeIn ease-out 1s;
+  animation-delay: .2s; 
+}
+
+.card3 {
+  animation: fadeIn ease-out 1s;
+  animation-delay: .4s; 
+}
+
+.card4{
+  animation: fadeIn ease-out 1s;
+  animation-delay: .6s; 
+}
+
+.card5 {
+  animation: fadeIn ease-out 1s;
+  animation-delay: .8s; 
+}
+
+.card6{
+  animation: fadeIn ease-out 1s;
+  animation-delay: 1s; 
+}
+.card7{
+  animation: fadeIn ease-out 1s;
+  animation-delay: 1.2s; 
+}
+
+.card8 {
+  animation: fadeIn ease-out 1s;
+  animation-delay: 1.4s; 
+}
+
+.card9{
+  animation: fadeIn ease-out 1s;
+  animation-delay: 1.6s; 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0.5;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity:1;
+  }
+}
+
 
 
 
@@ -540,7 +671,7 @@ h1 {
   object-fit: cover;
 }
 
-// SECTION MENU
+// PAGE MENU
 .box-menu {
   display: flex;
   flex-direction: column;
@@ -570,6 +701,7 @@ h1 {
 
 .box-menu__icon-coeur {
   transform: translate(10px, 10px);
+  font-size: 1.2rem;
 }
 
 .box-menu__titre {
@@ -587,22 +719,19 @@ h1 {
   display: flex;
   justify-content: space-around;
   flex-flow: column;
+  opacity: 1;
 }
 
 .box-menu__cards {
   width: 90%;
   height: 68px;
   background-color: white;
-  padding: 0 10px;
+  padding-left: 10px;
   display: flex;
   line-height: 15px;
   font-size: 0.9rem;
   border-radius: 15px;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
-}
-
-.box-menu__cards:hover {
-  box-shadow: $box-shadow-hover;
 }
 
 .cards__description {
@@ -633,18 +762,7 @@ h1 {
 .cards__prix {
   font-weight: bolder;
   display: flex;
-}
-
-.cards__box-animation {
-  width: 45px;
-  height: 51px;
-  border-radius: 0 15px 15px 0;
-  background-color: $ter-color;
-}
-
-.fa-check-circle {
-  color: $bg-sec-color;
-  transform: translate(14px, 19px);
+  padding-right: 10px;
 }
 
 // BOUTON
@@ -750,10 +868,6 @@ h1 {
 
   .container__page {
     max-width: 100%;
-  }
-
-  .loader-container {
-      max-width: 1025px;
   }
 
   .container-banniere {
