@@ -97,6 +97,7 @@ $filter-light: brightness(111%);
   color: $prem-color;
   font-size: 1.4rem;
   z-index: 99;
+  cursor: pointer;
   &:hover {
     opacity: 1;
     transition-property: opacity;
@@ -741,6 +742,7 @@ h1 {
   font-size: 0.9rem;
   border-radius: 15px;
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  overflow: hidden;
 }
 
 .cards__description {

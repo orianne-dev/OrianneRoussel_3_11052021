@@ -48,6 +48,7 @@ section {
   color: #9356dc;
   font-size: 1.4rem;
   z-index: 99;
+  cursor: pointer;
 }
 .icon-coeur__rempli:hover {
   opacity: 1;
@@ -679,6 +680,7 @@ h1 {
   font-size: 0.9rem;
   border-radius: 15px;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
 .cards__description {
