@@ -1,3 +1,4 @@
+
 html,
 body,
 div,
@@ -52,6 +53,25 @@ section {
   transform: translate(-11px, 9px);
 }
 
+@-webkit-keyframes chargement {
+  0% {
+    opacity: 1;
+    visibility: visible;
+    z-index: 99999;
+    background-color: #000000;
+  }
+  90% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 99999;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 @keyframes chargement {
   0% {
     opacity: 1;
@@ -80,7 +100,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: chargement 3s;
+  -webkit-animation: chargement 3s;
+          animation: chargement 3s;
   left: 0;
   right: 0;
   bottom: 0;
@@ -102,14 +123,31 @@ section {
   border: 8px solid transparent;
   border-top-color: #9356dc;
   border-radius: 50%;
-  animation: loader-prem 1.2s linear infinite;
+  -webkit-animation: loader-prem 1.2s linear infinite;
+          animation: loader-prem 1.2s linear infinite;
 }
 
 .loader__child-sec {
   opacity: 1;
   border: 8px solid transparent;
   border-bottom-color: #9356dc;
-  animation: loader-sec 1.2sec linear infinite;
+  -webkit-animation: loader-sec 1.2sec linear infinite;
+          animation: loader-sec 1.2sec linear infinite;
+}
+
+@-webkit-keyframes loader-prem {
+  0% {
+    transform: rotate(0deg);
+    border-width: 10px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 1px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 10px;
+  }
 }
 
 @keyframes loader-prem {
@@ -126,6 +164,20 @@ section {
     border-width: 10px;
   }
 }
+@-webkit-keyframes loader-sec {
+  0% {
+    transform: rotate(0deg);
+    border-width: 1px;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-width: 10px;
+  }
+  100% {
+    transform: rotate(360deg);
+    border-width: 1px;
+  }
+}
 @keyframes loader-sec {
   0% {
     transform: rotate(0deg);
@@ -140,6 +192,17 @@ section {
     border-width: 1px;
   }
 }
+@-webkit-keyframes anime-check-icon {
+  10% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes anime-check-icon {
   10% {
     transform: rotate(0deg);
@@ -149,6 +212,14 @@ section {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes anim-check-box {
+  0% {
+    transform: translate(50px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
   }
 }
 @keyframes anim-check-box {
@@ -166,11 +237,16 @@ section {
   min-width: 50px;
 }
 .box-menu__cards:hover .cards__box-animation {
-  animation-name: anim-check-box;
-  animation-timing-function: ease;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: 1;
+  -webkit-animation-name: anim-check-box;
+          animation-name: anim-check-box;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   display: flex;
   flex: 0 0 15%;
   max-width: 50px;
@@ -181,10 +257,14 @@ section {
 }
 .box-menu__cards:hover .fa-check-circle {
   visibility: visible;
-  animation-name: anime-check-icon;
-  animation-timing-function: linear;
-  animation-duration: 0.5s;
-  animation-iteration-count: 1;
+  -webkit-animation-name: anime-check-icon;
+          animation-name: anime-check-icon;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
   background-color: #99e2d0;
   display: flex;
   width: 50px;
@@ -200,48 +280,76 @@ section {
 }
 
 .card1 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 0s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 
 .card2 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 0.2s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .card3 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 0.4s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .card4 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 0.6s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .card5 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 0.8s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .card6 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 1s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .card7 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 1.2s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .card8 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 1.4s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
 }
 
 .card9 {
-  animation: fadeIn ease-out 1s;
-  animation-delay: 1.6s;
+  -webkit-animation: fadeIn ease-out 1s;
+          animation: fadeIn ease-out 1s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -273,7 +381,8 @@ h1 {
 }
 
 .btn:hover {
-  filter: brightness(111%);
+  -webkit-filter: brightness(111%);
+          filter: brightness(111%);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
 }
 
@@ -344,8 +453,30 @@ h1 {
 .box-search__input {
   border: none;
   background-color: #e8e5e5;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-size: 0.9rem;
+}
+
+.box-search__input::-webkit-input-placeholder {
+  color: #353535;
+  font-weight: bolder;
+}
+
+.box-search__input::-moz-placeholder {
+  color: #353535;
+  font-weight: bolder;
+}
+
+.box-search__input:-ms-input-placeholder {
+  color: #353535;
+  font-weight: bolder;
+}
+
+.box-search__input::-ms-input-placeholder {
+  color: #353535;
+  font-weight: bolder;
 }
 
 .box-search__input::placeholder {
@@ -505,14 +636,16 @@ h1 {
 
 .box-restau__items:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
-  filter: brightness(111%);
+  -webkit-filter: brightness(111%);
+          filter: brightness(111%);
 }
 
 .box-restau__pics {
   height: 176px;
   width: 100%;
   border-radius: 15px 15px 0 0;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .box-restau__item--nouveau {
@@ -584,7 +717,8 @@ h1 {
 .ban__img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .box-menu {
@@ -829,12 +963,14 @@ h1 {
   }
 
   .box-process__titre {
+    -ms-grid-row-align: center;
     align-self: center;
     padding-left: 0;
   }
 
   .box-restau__titre {
-    text-align-last: center;
+    -moz-text-align-last: center;
+         text-align-last: center;
     width: -webkit-fill-available;
     align-content: center;
     padding-left: 0px;
@@ -888,5 +1024,3 @@ h1 {
     max-width: 1025px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
