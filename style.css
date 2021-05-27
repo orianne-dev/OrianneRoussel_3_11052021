@@ -808,6 +808,7 @@ h1 {
 
   .container-banniere {
     max-width: 1025px;
+    height: auto;
   }
 
   .box-search {
