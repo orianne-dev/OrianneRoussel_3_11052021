@@ -418,7 +418,7 @@ h1 {
 .box-process__titre {
   align-self: flex-start;
   padding-left: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .box-process__btn {
@@ -492,7 +492,7 @@ h1 {
 .box-restau__titre {
   align-self: flex-start;
   padding-left: 20px;
-  width: 100%;
+  width: 90%;
 }
 
 .box-restau__items {
