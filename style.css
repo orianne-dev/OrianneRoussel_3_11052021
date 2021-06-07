@@ -109,7 +109,7 @@ section {
   opacity: 1;
   border: 8px solid transparent;
   border-bottom-color: #9356dc;
-  animation: loader-sec 1.2sec linear infinite;
+  animation: loader-sec 1.2s linear infinite;
 }
 
 @keyframes loader-prem {
